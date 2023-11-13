@@ -1,0 +1,20 @@
+*{
+    padding: 0%;
+}
+body{
+    background-color: rgb(150, 193, 234);
+}
+.first{
+    color: aqua;
+    text-align: center;
+    padding: 100px;
+    display: grid; 
+}
+button{
+    margin-left: 30%;
+    margin-right: 30%;
+    max-width: 80%;
+    padding: 16px;
+    border-radius: 15px;
+    margin-top: 15px;
+}

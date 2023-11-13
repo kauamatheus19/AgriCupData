@@ -5,6 +5,35 @@
 </head>
 <body>
     <h1>Cadastro de Produtos Diversos</h1>
+    <?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    
+    $conexao = new mysqli("localhost", "usuario", "senha", "nome_do_banco");
+
+    if ($conexao->connect_error) {
+        die("Erro na conexão: " . $conexao->connect_error);
+    }
+
+    $nome = $_POST["nome"];
+    $tipo = $_POST["tipo"];
+    $marca = $_POST["marca"];
+    $peso = $_POST["peso"];
+    $descricao = $_POST["descricao"];
+
+    $caminho_imagem = "caminho/do/seu/diretorio/" . basename($_FILES["imagem"]["name"]);
+    move_uploaded_file($_FILES["imagem"]["tmp_name"], $caminho_imagem);
+
+    $sql = "INSERT INTO produtos_diversos (nome, tipo, marca, peso, descricao, imagem) VALUES ('$nome', '$tipo', '$marca', '$peso', '$descricao', '$caminho_imagem')";
+
+    if ($conexao->query($sql) === TRUE) {
+        echo "Produto cadastrado com sucesso!";
+    } else {
+        echo "Erro ao cadastrar produto: " . $conexao->error;
+    }
+
+    $conexao->close();
+}
+?>
     
     <form method="post" action="processar_Outros.php" enctype="multipart/form-data">
         <label for="nome">Nome do Produto:</label>
