@@ -2,6 +2,7 @@
 <html>
 <head>
 <title>Cadastro de Sementes</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
     <h1>Cadastro de Sementes</h1>
@@ -57,5 +58,3 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </form>
 </body>
 </html>
-$conn->close();
-?>

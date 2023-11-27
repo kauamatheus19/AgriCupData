@@ -2,6 +2,7 @@
 <html>
 <head>
     <title>Cadastro de Inseticidas</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <h1>Cadastro de Inseticidas</h1>
