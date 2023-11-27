@@ -2,6 +2,7 @@
 <html>
 <head>
     <title>Cadastro de Produtos Diversos</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <h1>Cadastro de Produtos Diversos</h1>

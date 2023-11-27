@@ -5,6 +5,7 @@
 </head>
 <body>
     <h1>Cadastro de Adubos</h1>
+    <link rel="stylesheet" href="style.css">
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 

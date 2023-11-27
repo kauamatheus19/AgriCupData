@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Cadastro de Maquinário Agrícola</title>
+<title>Cadastro de Maquinário Agrícola</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
     <h1>Cadastro de Maquinário Agrícola</h1>
@@ -36,7 +37,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $conexao->close();
 }
 ?>
-    
+<div>
     <form method="post" action="processar_maquinario.php" enctype="multipart/form-data">
         <label for="nome">Nome da Máquina:</label>
         <input type="text" name="nome" required><br>
@@ -64,5 +65,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         <input type="submit" value="Cadastrar Maquinário">
     </form>
+ </div>
 </body>
 </html>
